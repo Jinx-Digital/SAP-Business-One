@@ -1,0 +1,19 @@
+{
+    "name": "jinx/sapb1",
+    "description": "SAP Business One Service Layer Client for PHP",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jinx\\SapB1\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jinx\\SapB1\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
