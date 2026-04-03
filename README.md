@@ -7,7 +7,7 @@ A standalone PHP library for interacting with the SAP Business One Service Layer
 - **PHPStan Compatible**: All classes and methods include full PHPDoc blocks with `@param` and `@return` types for static analysis.
 - **PHPUnit Support**: Fully testable via PHPUnit, covering filters, configuration, and response handling.
 - **PSR-4 Autoloading**: Standardized project structure via Composer.
-- **Yii2-style Query Builder**: Build complex OData queries with `where()`, `andWhere()`, `orWhere()` and nested sub-queries.
+- **Query Builder**: Build complex OData queries with `where()`, `andWhere()`, `orWhere()` and nested sub-queries.
 - **Advanced Filtering**: Supports a wide range of OData filters including `Any` (collection filtering), `IsNull`, `Not`, and more.
 - **Developer Productivity**: Shorthand service access and magic query methods.
 
