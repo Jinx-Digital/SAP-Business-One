@@ -62,6 +62,6 @@ class FilterTest extends TestCase
         $q = new Query($this->config, [], 'Items', []);
         $q->where(new InArray('Status', ['Active', 'Pending']))
           ->andWhere(new IsNull('UpdateDate'));
-        $this->assertEquals("(Status in ('Active','Pending')) and UpdateDate eq null", $q->buildFilter());
+        $this->assertEquals("(Status eq 'Active' or Status eq 'Pending') and UpdateDate eq null", $q->buildFilter());
     }
 }

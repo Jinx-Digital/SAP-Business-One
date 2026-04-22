@@ -5,17 +5,21 @@ namespace Jinx\SapB1\Filters;
 class InArray extends Filter
 {
   private string $field;
-  private array $values;
+  private array $collection;
 
-  public function __construct(string $field, array $values)
+  public function __construct(string $field, array $collection)
   {
     $this->field = $field;
-    $this->values = $values;
+    $this->collection = $collection;
   }
 
   public function execute(): string
   {
-    $values = array_map(fn($v) => $this->escape($v), $this->values);
-    return "({$this->field} in (".implode(',', $values)."))";
+    $items = array_map(
+      fn($value) => "{$this->field} eq {$this->escape($value)}",
+      $this->collection
+    );
+
+    return "(".implode(' or ', $items).")";
   }
 }
